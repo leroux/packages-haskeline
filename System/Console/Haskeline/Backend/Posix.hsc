@@ -48,7 +48,7 @@ import GHC.IOBase(haFD,FD)
 import GHC.Handle (withHandle_)
 #endif
 
-#if defined(USE_TERMIOS_H) || defined(__ANDROID__)
+#if defined(USE_TERMIOS_H) || defined(__ANDROID__) || defined(solaris2_HOST_OS)
 #include <termios.h>
 #endif
 #include <sys/ioctl.h>
